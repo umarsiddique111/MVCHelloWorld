@@ -17,7 +17,7 @@
       "ami_name": "windows-aws-base-{{timestamp}}",
       "communicator": "winrm",
       "winrm_username": "Administrator",
-      "winrm_password": ")igtK4!4?X3t3re?-iRpV9GZ)Hb4v.Ux"
+      "winrm_password": "Lj5;w%lCw$!N=OtsOVaoDsb@6r6S!g5h"
     }
   ],
   "description": "AWS Image",
@@ -26,7 +26,10 @@
 			"type": "powershell",
 			"inline":[
 			"choco install awscli",
-			"aws s3 cp s3://{{user `bucketname`}}/{{user `filename`}}.zip {{user `filename`}}.zip"
+			"aws s3 cp s3://{{user `bucketname`}}/{{user `filename`}}.rar {{user `filename`}}.rar",
+			"unrar e {{user `filename`}}.rar",
+			"rmdir /s {{user `filename`}}.rar",
+			"copy '{{user `filename`}}' *.*  'C:\inetpub\wwwroot'"
 			 ]
     }
   ]
