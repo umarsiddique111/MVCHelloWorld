@@ -29,7 +29,7 @@
 			"aws s3 cp s3://{{user `bucketname`}}/{{user `filename`}}.rar {{user `filename`}}.rar",
 			"unrar e {{user `filename`}}.rar",
 			"rmdir /s {{user `filename`}}.rar",
-			"cp {{user `filename`}} *.*  C:\inetpub\wwwroot"
+			"cp {{user `filename`}} *.*  "C:\inetpub\wwwroot""
 			 ]
     }
   ]
