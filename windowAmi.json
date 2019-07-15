@@ -1,0 +1,33 @@
+{
+"variables": {
+    "bucketname": "",
+	"filename": "",
+	"aws_access_key":"",
+	"aws_secret_key":""
+    
+  },
+"builders": [
+    {
+      "type": "amazon-ebs",
+      "access_key": "{{user `aws_access_key`}}",
+      "secret_key": "{{user `aws_secret_key`}}",
+      "region": "ap-south-1",
+      "instance_type": "t2.micro",
+      "source_ami":"ami-00c810e37995b0bfc",
+      "ami_name": "windows-aws-base-{{timestamp}}",
+      "communicator": "winrm",
+      "winrm_username": "Administrator",
+      "winrm_password": ")igtK4!4?X3t3re?-iRpV9GZ)Hb4v.Ux"
+    }
+  ],
+  "description": "AWS Image",
+	"provisioners": [
+		{
+			"type": "powershell",
+			"inline":[
+			"choco install awscli",
+			"aws s3 cp s3://{{user `bucketname`}}/{{user `filename`}}.zip {{user `filename`}}.zip"
+			 ]
+    }
+  ]
+ }
