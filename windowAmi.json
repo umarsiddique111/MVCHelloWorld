@@ -22,7 +22,7 @@
       "winrm_username": "Administrator",
       "winrm_password": "VAk(xynmdNyuB=crmpROV?k!msPfM.dd",
 	  "winrm_use_ssl": true,
-      "winrm_insecure": true,
+      "winrm_insecure": true
     }
   ],
   "description": "AWS Image",
