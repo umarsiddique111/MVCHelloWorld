@@ -17,7 +17,7 @@
       "instance_type": "t2.micro",
       "source_ami":"{{user `ami-img`}}",
       "ami_name": "windows-aws-base-{{timestamp}}",
-	"user_data_file": "ec2-userdata1.ps",
+	"user_data_file": "ec2-userdata1.ps1",
       "communicator": "winrm",
       "winrm_username": "Administrator",
       "winrm_password": "VAk(xynmdNyuB=crmpROV?k!msPfM.dd"
