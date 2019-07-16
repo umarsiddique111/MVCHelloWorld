@@ -3,7 +3,8 @@
     "bucketname": "",
 	"filename": "",
 	"aws_access_key":"",
-	"aws_secret_key":""
+	"aws_secret_key":"",
+	"ami-img":""
     
   },
 "builders": [
@@ -13,7 +14,7 @@
       "secret_key": "{{user `aws_secret_key`}}",
       "region": "ap-south-1",
       "instance_type": "t2.micro",
-      "source_ami":"ami-00c810e37995b0bfc",
+      "source_ami":"{{user `ami-img`}}",
       "ami_name": "windows-aws-base-{{timestamp}}",
       "communicator": "winrm",
       "winrm_username": "Administrator",
