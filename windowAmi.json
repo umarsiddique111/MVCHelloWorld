@@ -18,7 +18,8 @@
       "ami_name": "windows-aws-base-{{timestamp}}",
       "communicator": "winrm",
       "winrm_username": "Administrator",
-      "winrm_password": "VAk(xynmdNyuB=crmpROV?k!msPfM.dd"
+      "winrm_password": "VAk(xynmdNyuB=crmpROV?k!msPfM.dd",
+	"winrm_timeout": "30m"
     }
   ],
   "description": "AWS Image",
