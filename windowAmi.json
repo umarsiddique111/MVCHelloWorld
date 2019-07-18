@@ -22,7 +22,6 @@
        "winrm_password": "VAk(xynmdNyuB=crmpROV?k!msPfM.dd",
       "winrm_use_ssl": false,
       "winrm_insecure": true,
-       "winrm_wait_timeout": "5m",
       "winrm_port":5985,
       "vpc_id":	"vpc-e595b48d",
       "subnet_id":"subnet-9aca84f2",
