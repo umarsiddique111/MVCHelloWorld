@@ -20,8 +20,6 @@
       "communicator": "winrm",
       "winrm_username": "Administrator",
        "winrm_password": "VAk(xynmdNyuB=crmpROV?k!msPfM.dd",
-      "winrm_use_ssl": false,
-      "winrm_insecure": true,
       "winrm_port":5985,
       "vpc_id":	"vpc-e595b48d",
       "subnet_id":"subnet-9aca84f2",
