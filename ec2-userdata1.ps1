@@ -1,3 +1,4 @@
+<powershell>
 winrm quickconfig -q 
 winrm set winrm/config/winrs @{MaxMemoryPerShellMB="1024"} 
 winrm set winrm/config @{MaxTimeoutms="1800000"} 
@@ -8,3 +9,4 @@ netsh advfirewall firewall add rule name="WinRM 5986" protocol=TCP dir=in localp
 net stop winrm 
 sc config winrm start= auto 
 net start winrm
+</powershell>
