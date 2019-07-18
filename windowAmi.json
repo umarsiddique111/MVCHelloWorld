@@ -37,6 +37,6 @@
 			"rmdir /s {{user `filename`}}.rar",
 			"cp {{user `filename`}} *.*  'c:\\inetpub\\wwwroot'"
 			 ]
-    },
+    }
   ]
  }
