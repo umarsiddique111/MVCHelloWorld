@@ -17,7 +17,10 @@
       "source_ami":"{{user `ami-img`}}",
       "ami_name": "windows-aws-base-{{timestamp}}",
       "communicator": "winrm",
+       "ssh_keypair_name": "jenkins-keypair",
+	"ssh_private_key_file": "jenkins-keypair.pem",
       "winrm_username": "Administrator",
+	"winrm_password": "VAk(xynmdNyuB=crmpROV?k!msPfM.dd",    
       "winrm_insecure": true,
        "winrm_use_ssl": true,
       "vpc_id":	"vpc-e595b48d",
@@ -27,14 +30,6 @@
   ],
   "description": "AWS Image",
 	"provisioners": [
-		
-		 {
-    "type": "powershell",
-    "scripts": [
-        "disable-uac.ps1"
-       
-    ]
-  },
 		{
 		 "type": "powershell",
  		 "inline": [
