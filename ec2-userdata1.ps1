@@ -2,8 +2,8 @@ powershell>
 write-output "Running User Data Script"
 write-host "(host) Running User Data Script"
 
-cmd.exe /c net user /add Administrator VAk(xynmdNyuB=crmpROV?k!msPfM.dd
-cmd.exe /c net localgroup administrators Administrator /add
+cmd.exe /c net user /add umar VAk(xynmdNyuB=crmpROV?k!msPfM.dd
+cmd.exe /c net localgroup umar Administrator /add
 
 Set-ExecutionPolicy -ExecutionPolicy bypass -Force
 
@@ -30,6 +30,6 @@ cmd.exe /c netsh firewall add portopening TCP 5985 "Port 5985"
 cmd.exe /c net stop winrm
 cmd.exe /c sc config winrm start= auto
 cmd.exe /c net start winrm
-cmd.exe /c wmic useraccount where "name='Administrator'" set PasswordExpires=FALSE
+cmd.exe /c wmic useraccount where "name='umar'" set PasswordExpires=FALSE
 
 </powershell>
