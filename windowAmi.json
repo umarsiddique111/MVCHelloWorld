@@ -19,7 +19,6 @@
       "ami_name": "windows-aws-base-{{timestamp}}",
       "communicator": "winrm",
       "winrm_username": "umar",
-       "winrm_password": "VAk(xynmdNyuB=crmpROV?k!msPfM.dd",
       "winrm_port":5985,
       "vpc_id":	"vpc-e595b48d",
       "subnet_id":"subnet-9aca84f2",
@@ -29,6 +28,12 @@
   "description": "AWS Image",
 	"provisioners": [
 		{
+ “type”: “powershell”,
+ “inline”: [
+ “C:\\ProgramData\\Amazon\\EC2-Windows\\Launch\\Scripts\\InitializeInstance.ps1 -Schedule”,
+ “C:\\ProgramData\\Amazon\\EC2-Windows\\Launch\\Scripts\\SysprepInstance.ps1 -NoShutdown”
+ ]
+ },{
 			"type": "powershell",
 			"inline":[
 			"choco install awscli",
@@ -37,13 +42,7 @@
 			"rmdir /s {{user `filename`}}.rar",
 			"cp {{user `filename`}} *.*  'c:\\inetpub\\wwwroot'"
 			 ]
-    },
-		{
- “type”: “powershell”,
- “inline”: [
- “C:\\ProgramData\\Amazon\\EC2-Windows\\Launch\\Scripts\\InitializeInstance.ps1 -Schedule”,
- “C:\\ProgramData\\Amazon\\EC2-Windows\\Launch\\Scripts\\SysprepInstance.ps1 -NoShutdown”
- ]
- }
+    }
+		
   ]
  }
