@@ -28,6 +28,14 @@
   ],
   "description": "AWS Image",
 	"provisioners": [
+		
+		 {
+    "type": "powershell",
+    "scripts": [
+        "disable-uac.ps1"
+       
+    ]
+  },
 		{
 		 "type": "powershell",
  		 "inline": [
