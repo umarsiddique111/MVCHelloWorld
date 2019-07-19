@@ -13,7 +13,6 @@
       "access_key": "{{user `aws_access_key`}}",
       "secret_key": "{{user `aws_secret_key`}}",
       "region": "ap-south-1",
-	"user_data_file": "ec2-userdata1.ps1",
       "instance_type": "t2.micro",
       "source_ami":"{{user `ami-img`}}",
       "ami_name": "windows-aws-base-{{timestamp}}",
