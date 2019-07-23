@@ -25,8 +25,8 @@
       "winrm_insecure": true,
        "winrm_use_ssl": true,
       "vpc_id":	"vpc-e595b48d",
-      "subnet_id":"subnet-9aca84f2",
-      "security_group_id":"sg-0b93c59f7a615c7ed"
+      "subnet_id":"subnet-9aca84f2"
+     
     }
   ],
   "description": "AWS Image",
