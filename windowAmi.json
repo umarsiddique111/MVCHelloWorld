@@ -38,6 +38,10 @@
  		 "C:\\ProgramData\\Amazon\\EC2-Windows\\Launch\\Scripts\\SysprepInstance.ps1 -NoShutdown"
          ]
          },
+		
+		{
+    "type": "windows-restart"
+       },
 		{
 			"type": "powershell",
 			"inline":[
