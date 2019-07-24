@@ -16,7 +16,6 @@
       "instance_type": "t2.micro",
       "source_ami":"{{user `ami-img`}}",
       "ami_name": "windows-aws-base-{{timestamp}}",
-       "user_data_file": "ec2-userdata1.ps1",
       "communicator": "winrm",
        "ssh_keypair_name": "jenkins-keypair",
 	"ssh_private_key_file": "jenkins-keypair.pem",
@@ -31,6 +30,14 @@
   ],
   "description": "AWS Image",
 	"provisioners": [
+		
+		 {
+		    "type": "powershell",
+		    "script": "ec2-userdata1.ps1"
+		  },
+			{
+    "type": "windows-restart"
+       },
 		{
 		 "type": "powershell",
  		 "inline": [
@@ -39,9 +46,7 @@
          ]
          },
 		
-		{
-    "type": "windows-restart"
-       },
+	
 		{
 			"type": "powershell",
 			"inline":[
