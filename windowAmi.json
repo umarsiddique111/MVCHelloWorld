@@ -30,14 +30,11 @@
   ],
   "description": "AWS Image",
 	"provisioners": [
+				{
+			    "type": "windows-restart"
+			       },
 		
-		 {
-		    "type": "powershell",
-		    "script": "ec2-userdata1.ps1"
-		  },
-			{
-    "type": "windows-restart"
-       },
+		
 		{
 		 "type": "powershell",
  		 "inline": [
@@ -45,6 +42,11 @@
  		 "C:\\ProgramData\\Amazon\\EC2-Windows\\Launch\\Scripts\\SysprepInstance.ps1 -NoShutdown"
          ]
          },
+		 {
+		    "type": "powershell",
+		    "script": "ec2-userdata1.ps1"
+		  },
+	
 		
 	
 		{
